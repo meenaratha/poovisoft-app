@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+:root {
+
+    /*color code*/
+    --primary-color: #1070E6;
+    --secondary-color:#FF0000;
+
+    --open-sans: 'Open Sans', sans-serif;
+	--oswald: 'Oswald', sans-serif;
+
+	--blue: #0097FC;
+	--light-blue: #7AC1FE;
+	--dark-blue: #008CEA;
+	--grey: #828282;
+    /*animation */
+    --blink-animation: blink ;
+    --text-glow-animation : textglow;
+    --blink-glowtext-animation: blinkglow;
+    --spin-animation : spin;
+    --flip-animation-name: autoFlipAnimation;
+    /* how to declare this variable css --> Eg: animation: var(--flip-animation-name) 5s infinite; */
+  }
+  body{
+    scroll-behavior: smooth;
+    background-color: #fff;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #3498db #f0f0f0; /* For Firefox */
+    font-family: var(--oswald);
+  }
+  body::-webkit-scrollbar {
+    width: 7px; /* For Chrome, Safari, and Opera */
+    background:#000;
+}
+
+body::-webkit-scrollbar-thumb {
+    background:var(--primary-color);
+    background-image:-webkit-linear-gradient(20deg, rgba(255,255,255,.5) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.5) 50%, rgba(255,255,255,.5) 75%, transparent 75%);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 6px rgba(0,0,0,.3);
+  background:#f4f4f4;
+}
+
+#back-to-top-button{
+    display: inline-block;
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+   display: none;
+}
+#back-to-top-button::after{
+    content: "👆🏻";
+  font-size: 1.5rem;
+  line-height: 40px;
+
+
+}
+#back-to-top-button:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+#back-to-top-button:active{
+    background-color: #555;
+}
+
+@media (min-width: 500px) {
+    #back-to-top-button {
+        margin: 30px;
+      }
+}

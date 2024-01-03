@@ -1,0 +1,80 @@
+ /* blink animation*/
+ @keyframes blink {
+    0% { opacity: 1;
+
+    }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* text glowing animation*/
+
+@keyframes textglow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                     0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.8),
+                     0 0 40px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                     0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/*blink and text glow*/
+
+@keyframes blinkglow {
+    0% {
+        opacity: 1;
+        text-shadow:  0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        opacity: 0;
+        text-shadow:  0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* spin rotate animation*/
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    100% { transform: rotate(360deg); }
+}
+
+#content {
+    display: none; /* Hide content initially */
+}
+
+/* flip animation*/
+@keyframes autoFlipAnimation {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
